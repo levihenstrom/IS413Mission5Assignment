@@ -13,7 +13,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// Disable HTTPS redirection for this assignment to avoid dev warning output.
+// In production you would enable HTTPS redirection.
+// app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();

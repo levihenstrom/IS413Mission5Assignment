@@ -2,6 +2,15 @@ html {
   font-size: 14px;
 }
 
+:root {
+  /* BYU brand colors */
+  --byu-navy: #002E5D;
+  --byu-royal: #0047BA;
+  --byu-white: #FFFFFF;
+  --byu-light-blue: #BDD6E6;
+  --byu-slate: #7C878E;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -9,7 +18,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem var(--byu-white), 0 0 0 0.25rem var(--byu-royal);
 }
 
 html {
@@ -19,10 +28,85 @@ html {
 
 body {
   margin-bottom: 60px;
+  background: linear-gradient(180deg, var(--byu-white) 0%, var(--byu-light-blue) 100%);
+  color: var(--byu-navy);
+  padding-top: 80px;
+}
+
+.navbar {
+  background-color: var(--byu-white) !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--byu-navy) !important;
+}
+
+.hero {
+  background-color: var(--byu-white);
+  border: 1px solid var(--byu-light-blue);
+  border-radius: 0.75rem;
+  padding: 2rem 1rem;
+}
+
+.hero-image {
+  max-width: 220px;
+  margin: 0 auto 1rem;
+}
+
+.btn-primary {
+  background-color: var(--byu-navy);
+  border-color: var(--byu-navy);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--byu-royal);
+  border-color: var(--byu-royal);
+}
+
+.btn-outline-secondary {
+  color: var(--byu-navy);
+  border-color: var(--byu-navy);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: var(--byu-navy);
+  border-color: var(--byu-navy);
+  color: var(--byu-white);
+}
+
+.hobby-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid var(--byu-light-blue);
+}
+
+.rate-card,
+.total-card {
+  background-color: var(--byu-white);
+  border: 1px solid var(--byu-light-blue);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rate-amount,
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--byu-navy);
+  margin: 0;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: var(--byu-slate);
   text-align: end;
 }
 

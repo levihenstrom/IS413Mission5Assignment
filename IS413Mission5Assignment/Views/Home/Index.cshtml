@@ -1,8 +1,42 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "BYU Basketball";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Header / Hero section -->
+<div class="text-center mb-4 hero">
+    <div class="d-flex justify-content-center">
+        <!-- Centered hero image for the header area. -->
+        <img class="img-fluid rounded shadow-sm hero-image" src="~/images/byu.jpg" alt="BYU basketball" />
+    </div>
+    <h1 class="display-4">BYU Basketball</h1>
+    <p class="lead">My hobby is following BYU hoops, studying the plays, and tracking the season.</p>
+</div>
+
+<!-- Hobby introduction: image and paragraphs side by side -->
+<div class="row g-4 align-items-center">
+    <div class="col-md-6">
+        <!-- Local images live in wwwroot/images -->
+        <img class="img-fluid rounded shadow-sm hobby-image" src="~/images/IMG_8625.jpeg" alt="Levi at a BYU game" />
+    </div>
+    <div class="col-md-6">
+        <!-- Hobby story paragraphs -->
+        <p>
+            I'm Levi and I am a huge BYU fan! I've watched BYU play since I was little, and I've only become a bigger fan.
+            Now that I'm a student here I make sure to attend every game, and watch the away ones too!
+        </p>
+        <p>
+            In addition to being a fan, I now have the opportunity to work for the team!
+            I'm currently a Data Science Intern for the Men's Team's Strength and Conditioning Coach.
+            Getting to work at the facilities, interact with the players, and help the team is a dream come true.
+        </p>
+        <p>
+            If you want to learn the basics of the game, I can help you understand the rules,
+            positions, and common plays. I can also help you learn about the rich history of BYU's basketball team!
+            The calculator page estimates what it would cost for a tutoring session.
+        </p>
+        <!-- Navigation to the calculator -->
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Calculator">Tutoring Calculator</a>
+        </div>
+    </div>
 </div>

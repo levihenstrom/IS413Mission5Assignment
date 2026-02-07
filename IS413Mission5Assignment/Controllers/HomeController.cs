@@ -8,12 +8,19 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
+        // Home page with hobby overview.
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Calculator()
     {
-        return View();
+        // Simple view model so the hourly rate is easy to change later.
+        var model = new TutoringCalculatorViewModel
+        {
+            HourlyRate = 25m
+        };
+
+        return View(model);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

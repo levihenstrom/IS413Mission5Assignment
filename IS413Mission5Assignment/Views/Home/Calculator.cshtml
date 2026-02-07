@@ -1,0 +1,51 @@
+﻿@model IS413Mission5Assignment.Models.TutoringCalculatorViewModel
+@{
+    ViewData["Title"] = "Tutoring Calculator";
+}
+
+<!-- Calculator header -->
+<h1 class="mb-3">Tutoring Cost Calculator</h1>
+<p class="text-muted">Enter how many hours of BYU basketball tutoring you want, and I will estimate the total.</p>
+
+<!-- Calculator form row -->
+<div class="row g-3 mt-2">
+    <div class="col-md-4">
+        <label class="form-label" for="hoursInput">Hours needed</label>
+        <input class="form-control" id="hoursInput" type="number" min="0.25" step="0.25" placeholder="e.g., 2.5" />
+        <div class="form-text text-danger" id="hoursError"></div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for="serviceSelect">Service</label>
+        <!-- Service choice controls the hourly rate used in the total. -->
+        <select class="form-select" id="serviceSelect">
+            <option value="25" selected>General Tutoring $25/hr</option>
+            <option value="50">Basketball Facilities Tour $50/hr</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Hourly rate</label>
+        <!-- Styled card instead of an input to avoid confusion. -->
+        <div class="rate-card" id="rateCard" data-rate="@Model.HourlyRate">
+            <p class="rate-amount" id="rateAmount">@Model.HourlyRate.ToString("C")</p>
+            <small class="text-muted">Per hour</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Total</label>
+        <!-- Styled card for the calculated total. -->
+        <div class="total-card">
+            <p class="total-amount" id="totalOutput">$0.00</p>
+            <small class="text-muted">Estimate</small>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary mt-3" id="calculateBtn" type="button">Calculate Total</button>
+
+<div class="mt-4">
+    <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Back to home</a>
+</div>
+
+@section Scripts {
+    <script src="~/js/tutorCalculator.js" asp-append-version="true"></script>
+}
