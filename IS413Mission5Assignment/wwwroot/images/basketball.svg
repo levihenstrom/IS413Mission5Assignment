@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Basketball illustration">
-  <rect width="640" height="400" fill="#FFFFFF"/>
-  <circle cx="320" cy="200" r="140" fill="#0047BA"/>
-  <circle cx="320" cy="200" r="120" fill="#002E5D"/>
-  <path d="M320 80a120 120 0 0 1 0 240" stroke="#FFFFFF" stroke-width="12" fill="none"/>
-  <path d="M200 200a120 120 0 0 0 240 0" stroke="#FFFFFF" stroke-width="12" fill="none"/>
-  <path d="M240 120c50 50 50 110 0 160" stroke="#FFFFFF" stroke-width="12" fill="none"/>
-  <path d="M400 120c-50 50-50 110 0 160" stroke="#FFFFFF" stroke-width="12" fill="none"/>
-</svg>
